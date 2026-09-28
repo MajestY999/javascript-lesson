@@ -1,5 +1,16 @@
-let a = 1;
-console.log(a);
+const width = 10;
+const height = 5;
 
-a = "test";
-console.log(a);
+const space = width * height;
+const newWidth = width - 4;
+const newWidth2 = width + 4;
+const division = newWidth / newWidth2;
+const volume = 2 ** 3;
+console.log(volume);
+console.log(division);
+
+//Строки
+
+const city = "Moscow";
+const street = "Новослободская";
+console.log(city + " " + street + ' ' + 5);
