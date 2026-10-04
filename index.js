@@ -1,11 +1,11 @@
-console.log(Boolean(0));
-console.log(Boolean("ekfjj"));
+//if else
+const money = 100;
 
-
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(Number("sx")));
-console.log(`a := 5`);
-
-console.log(Number('10-1'))
-console.log(Boolean('5') + 9)
+const canBuy = money > 50;
+if (canBuy) {
+  console.log("Может купить наш товар");
+} else if (money > 55) {
+  console.log('Куплен мини продукт');
+} else {
+  console.log("Не может купить наш товар ");
+}
