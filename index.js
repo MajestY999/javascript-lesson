@@ -1,11 +1,12 @@
-//if else
-const money = 100;
+//Упражнение размещение депозита
 
-const canBuy = money > 50;
-if (canBuy) {
-  console.log("Может купить наш товар");
-} else if (money > 55) {
-  console.log('Куплен мини продукт');
-} else {
-  console.log("Не может купить наш товар ");
+const moneyBank = 10000;
+const countYear = 24;
+const procent = 0.07;
+
+const priceHous = moneyBank * (1 + procent / 12) ** 24;
+if (priceHous > 13500) {
+  console.log(`Вася сможет купить дом. У него ${priceHous}`);
+} else if (priceHous < 13500) {
+  console.log(`Вася не может купить дом. У него ${priceHous}`);
 }
