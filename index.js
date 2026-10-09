@@ -23,27 +23,25 @@ switch (true) позволяет проверять произвольные в�
 
 // const result = prompt("Сколько будет 7 +/- 15? ");
 
-// if (result === "Я не робот") {
-//   console.log("Успех");
-// } else {
-//   // const resNum = Number(result);
-//   switch (Number(result)) {
-//     case 22:
-//     case -8:
-//       console.log("Успех");
-//       break;
-//     default:
-//       console.log("Вы робот");
-//   }
-// }
+if (result === "Я не робот") {
+  console.log("Успех");
+} else {
+  // const resNum = Number(result);
+  switch (Number(result)) {
+    case 22:
+    case -8:
+      console.log("Успех");
+      break;
+    default:
+      console.log("Вы робот");
+  }
+}
 
-// switch (true) {
-//   case Number(result) === 22 ||Number(result) === -8:
-//     console.log("Успех");
-//     break;
+switch (true) {
+  case Number(result) === 22 ||Number(result) === -8:
+    console.log("Успех");
+    break;
 
-//   default:
-//     console.log("Вы робот");
-// }
-const a = 5;
-console.log(a > 6 ? a < 3 : a > 5)
+  default:
+    console.log("Вы робот");
+}
