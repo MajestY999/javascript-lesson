@@ -1,51 +1,23 @@
-const role = "ceo";
+//Тернарные операторы
+const bmwX3 = 100000;
+const fordFocusPrice = 10000;
+const budget = 10000;
+let message =
+  budget >= bmwX3 ? "bmwX3" : budget > fordFocusPrice ? "Ford" : "Велосипед";
 
-// if (role === "manager") {
-//   console.log("Менеджер");
-// } else if (role === "admin") {
-//   console.log("Админ");
-// } else if (role === "ceo") {
-//   console.log("CEO");
-// } else {
-//   console.log("Мы не занем кто ты ");
+//условие ? выражениеЕслиИстинно : выражениеЕслиЛожно;
+
+console.log(`Я хочу купить ${message}`);
+
+// } else if (budget > fordFocusPrice) {
+//   message = "Ford  ";
 // }
 
-switch (role) {
-  case "manager":
-    console.log("Менеджер");
-    break;
-  case "admin":
-    console.log("Админ");
-    break;
-  case "ceo":
-    console.log("CEO");
-    break;
-  default:
-    console.log("Мы не знаем кто ты");
-    break;
-}
+// const str = 10 > 0 ? "Больше 0 " :"Меньше 0 ";
+// console.log(str);
 
-switch (role) {
-  case "manager":
-
-  case "admin":
-    console.log("Не руководитель");
-    break;
-  case "ceo":
-    console.log("Руководитель");
-    break;
-  default:
-    console.log("Мы не знаем кто ты");
-}
-
-const num = - 1;
-switch (true) {
-  case num > 0:
-    console.log("Положительный ");
-    break;
-  case num < 0:
-    console.log("Отрицвтельный ");
-    break;
-  default:
-    console.log("Ноль");
-}
+// if (10 > 0) {
+//   console.log("Больше 0 ");
+// } else {
+//   console.log("Меньше 0");
+// } //точь в точь что и выше
