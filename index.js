@@ -1,12 +1,11 @@
-//Упражнение размещение депозита
-
-const moneyBank = 10000;
-const countYear = 24;
-const procent = 0.07;
-
-const priceHous = moneyBank * (1 + procent / 12) ** 24;
-if (priceHous > 13500) {
-  console.log(`Вася сможет купить дом. У него ${priceHous}`);
-} else if (priceHous < 13500) {
-  console.log(`Вася не может купить дом. У него ${priceHous}`);
+const secretNumber = "7"; //При использовании строк у нас не будет работать строгое просто потоу что оно проверяет значение на то чтобы оно было числом
+//и не строгое лучше не использовать от слова соовсем
+if (secretNumber === 7) {
+  console.log("Угадал строго");
 }
+
+if (secretNumber == 7) {
+  console.log("Угадал не строго");
+}
+
+// const q = Number(prompt('введите число'))
