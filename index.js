@@ -1,47 +1,17 @@
-//условие ? выражениеЕслиИстинно : выражениеЕслиЛожно;
+const isAdmin = true;
+const canWrite = true;
 
-/*Методом prompt получите ответ пользователя на вопрос "Сколкьо будет  7 + или - 15" 
-Если ответ верен выведите в консоль 'Успех' или "Вы робот!"
-а если н введет 'Я не робот' тоже 'Успех'
+console.log(`Системный файл ${isAdmin && canWrite}`);
+console.log(`Обычный файл? ${isAdmin || canWrite}`);
+console.log(`Инвертируем права Admin ${!isAdmin}`);
 
+const isEdited = false;
+const isSuperAdmin = true;
+console.log(
+  `Системный файл с редактированием ${isAdmin && canWrite && (!isEdited || isSuperAdmin)}`,
+);
+let a = 7;
 
-Основные идеи
-prompt() возвращает строку, поэтому числовые ответы необходимо конвертировать через Number().
-
-switch (true) позволяет проверять произвольные выражения и условия в каждом case,
- а не только фиксированные значения переменной.
-
-Условия в case можно объединять через || (логическое ИЛИ), 
-чтобы несколько вариантов приводили к одному результату.
-
-Альтернативный подход — вложить switch внутрь if/else: 
-сначала проверить строковый вариант, затем конвертировать и проверять числовые.
-
-Оба варианта корректны; выбор между ними — вопрос читаемости и стиля.
-
-*/
-
-// const result = prompt("Сколько будет 7 +/- 15? ");
-
-if (result === "Я не робот") {
-  console.log("Успех");
-} else {
-  // const resNum = Number(result);
-  switch (Number(result)) {
-    case 22:
-    case -8:
-      console.log("Успех");
-      break;
-    default:
-      console.log("Вы робот");
-  }
-}
-
-switch (true) {
-  case Number(result) === 22 ||Number(result) === -8:
-    console.log("Успех");
-    break;
-
-  default:
-    console.log("Вы робот");
+if (a === -8 || a === 22) {
+  
 }
