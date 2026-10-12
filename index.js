@@ -1,17 +1,22 @@
-const isAdmin = true;
-const canWrite = true;
+//Операторы с другими типами
+console.log("Вася " || "Олег");
+console.log(false || "Олег");
+console.log("Вася" || false);
+console.log(false || false);
+console.log("Вася" && "Олег");
 
-console.log(`Системный файл ${isAdmin && canWrite}`);
-console.log(`Обычный файл? ${isAdmin || canWrite}`);
-console.log(`Инвертируем права Admin ${!isAdmin}`);
+let a = "бяк";
+const userName = a || "Петя";
+console.log(userName);
 
-const isEdited = false;
-const isSuperAdmin = true;
-console.log(
-  `Системный файл с редактированием ${isAdmin && canWrite && (!isEdited || isSuperAdmin)}`,
-);
-let a = 7;
+isAdmin = true;
 
-if (a === -8 || a === 22) {
-  
+const fileName = isAdmin && "file.mp4";
+
+if (isAdmin === false) {
+  console.log(`Вы не админ.`);
+}else if(isAdmin === true){
+console.log(`Вы админ и доступ к файлу есть: ${fileName}`);
 }
+
+console.log(fileName);
