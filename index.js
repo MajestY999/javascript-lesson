@@ -1,28 +1,19 @@
-//Упражнение - Проверка прав
-/* Пользователь хочет приобрести игру  в магазине
-Он может это сделать только если: 
- - Его баланс больше 1000 (balance)
-  или число бонусов  больше 100 (bonusBalance)
-  - он не забанен (isBanned)
-  - игра не куплена (isExist)
-  - Игра в продаже (isSelling)
-  Напишите условие только для покупки и выведите результат в консоль */
+function logName(name, surname) {
+  console.log(`Мое имя ${name} ${surname}`);
+}
+logName("Артем", "Вилисов");
 
-const balance = 1200;
-const bonusBalance = 90;
-isExist = false; //false - означает что игра  не куплена, true  - обозначает что игра уже есть в библеотеке покупателя.
-isSelling = false; //true - означает что игра есть в продаже, false - игры нет в продаже.
-isBanned = false;
+// const a = logName()
+// console.log(typeof(a));
 
-if (
-  (balance > 1000 || bonusBalance > 100) &&
-  !isExist &&
-  isSelling &&
-  !isBanned
-) {
-  console.log("Вы можете купить игру");
-} else {
-  console.log("Вы не можеет купить игру ");
+function countDepositSum(depositInUSD, month, rate) {
+  return  depositInUSD * (1 + rate / 12) ** month;
+
 }
 
+const example1 = countDepositSum(1000, 24, 0.12);
+console.log(example1);
 
+
+const example2 = countDepositSum(1000, 48, 0.10);
+console.log(example2);
