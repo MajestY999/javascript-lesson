@@ -1,6 +1,28 @@
-let age = 0;
+//Упражнение - Проверка прав
+/* Пользователь хочет приобрести игру  в магазине
+Он может это сделать только если: 
+ - Его баланс больше 1000 (balance)
+  или число бонусов  больше 100 (bonusBalance)
+  - он не забанен (isBanned)
+  - игра не куплена (isExist)
+  - Игра в продаже (isSelling)
+  Напишите условие только для покупки и выведите результат в консоль */
 
-console.log(age || 18);
-console.log(age ?? 18);
-// console.log(username || "Default usersname");
-// console.log(username ?? "Default username");
+const balance = 1200;
+const bonusBalance = 90;
+isExist = false; //false - означает что игра  не куплена, true  - обозначает что игра уже есть в библеотеке покупателя.
+isSelling = false; //true - означает что игра есть в продаже, false - игры нет в продаже.
+isBanned = false;
+
+if (
+  (balance > 1000 || bonusBalance > 100) &&
+  !isExist &&
+  isSelling &&
+  !isBanned
+) {
+  console.log("Вы можете купить игру");
+} else {
+  console.log("Вы не можеет купить игру ");
+}
+
+
