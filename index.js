@@ -1,8 +1,10 @@
-function toPower(num = 2, power = 2) {
-  // num = num ?? 2;  можно такое не использовать так как выше есть переменные которые можно сделать чтобы они имели пкакое-то значение
-  // power = power ?? 2;
-  const res = num ** power;
-  return res;
+function canAccessWebsite(age) {
+  if (age < 18) {
+    return false;
+  }
+  return true;
 }
+console.log(canAccessWebsite(18));
 
-console.log(toPower(2));
+const canAccessWebsite2 = (age) => age <  18 ? 'Нет' :  "Да";
+console.log(canAccessWebsite2(18));
