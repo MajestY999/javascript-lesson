@@ -1,22 +1,17 @@
-const role1 = "Admin";
-const role2 = "user";
-const superuser = "superuser";
-
-const roles = ["Admin", "user", "superuser"];
-const userInfo = ["Анна", 25];
-console.log(roles);
-console.log(userInfo);
-console.log(roles.at(0));
-console.log(roles.length);
-console.log(roles.at(-1));
-
-const userAge = [2040 - 2022, 20 - "6", 10 > 0 ? 5 : 0];
-console.log(userAge);
-
-const userNames = new Array("Вася", "Петя", "Катя");
-console.log(userNames);
-function square(el){
-return el * el
-}
-
-console.log(square(5));
+const users = ["Аня", "Вика", "Катя"];
+users[2] = "Крестина";
+console.log(users);
+// users[3] = "Никита";
+// console.log(users);
+// при использовании метода push, добавляет элемент в конец массива:
+users.push("Никита");
+console.log(users);
+//Тоже самое только теперь наоборот, только теперь элемент добавляется в начало массива.
+users.unshift("Вася");
+console.log(users);
+//Удаляет последний элемент массива.
+users.pop();
+console.log(users);
+//Удаляет первый элмент массива.
+users.shift();
+console.log(users);
