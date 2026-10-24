@@ -1,19 +1,22 @@
-const KG_IN_USD = 7;
-const KM_IN_USD = 5;
+const role1 = "Admin";
+const role2 = "user";
+const superuser = "superuser";
 
-function calculateW(present) {
-  return present * KG_IN_USD;
+const roles = ["Admin", "user", "superuser"];
+const userInfo = ["Анна", 25];
+console.log(roles);
+console.log(userInfo);
+console.log(roles.at(0));
+console.log(roles.length);
+console.log(roles.at(-1));
+
+const userAge = [2040 - 2022, 20 - "6", 10 > 0 ? 5 : 0];
+console.log(userAge);
+
+const userNames = new Array("Вася", "Петя", "Катя");
+console.log(userNames);
+function square(el){
+return el * el
 }
 
-function calculateKm(distance) {
-  return distance * KM_IN_USD;
-}
-
-function getExchagePrice(present1, present2, distance) {
-  const price1 = calculateW(present1);
-  const price2 = calculateW(present2);
-  const distancePrice = distance * KM_IN_USD;
-  return price1 + price2 + distancePrice;
-}
-
-console.log(getExchagePrice(1, 2, 10));
+console.log(square(5));
