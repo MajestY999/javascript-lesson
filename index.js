@@ -26,25 +26,25 @@ function addTask(task) {
 
 function deleteTask(task) {
   const index = tasks.indexOf(task); //проверяет по индексу, индекс нашего элемента который записан в массив
-  if (index >= 0) {
-    tasks.splice(index, 1); // при наличии нашего элемента в массиве удаляется один элемент из массива который мы написали для удаления
-  }
-}
-
-function prioritate(task) {
-  const index = tasks.indexOf(task);
   if (index === -1) {
     return;
   }
-  tasks.splice(index, 1);
-  tasks.unshift(task);
+  return tasks.splice(index, 1); // при наличии нашего элемента в массиве удаляется один элемент из массива который мы написали для удаления
+}
+
+function prioritate(task) {
+  const result = deleteTask(task);
+  if (result) {
+    tasks.unshift(result[0]);
+  }
 }
 
 addTask("Задача 2");
 addTask("Задача 3");
 addTask("Задача 4");
 addTask("Задача 5");
+deleteTask("Задача 5");
 // deleteTask('Задача 4')
 console.log(tasks);
-prioritate("Задача 5");
+prioritate("Задача 5`");
 console.log(tasks);
