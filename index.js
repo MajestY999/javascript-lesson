@@ -1,31 +1,17 @@
-const url = "https://purpleschool.ru/course/javascript";
+const tasks = ["Задача 1", "Задача 2", "Задача 3"];
 
-
-
-/* 
--domen
--protocol, 
--path
-*/
-
-// const [protocol, _, host, ...path] = url.split("/");
-
-// console.log(protocol);
-// console.log(host);
-
-function getUrl(url) {
-  if (!url) {
-    console.log("URL не передан");
-    return console.error('ваша функция не имеет переменной для обозначения или она не та');
-    ;
+for (let i = 0; i < tasks.length; i++) {
+  if (tasks[i] === "Задача 2") {
+    continue;
   }
-  const [protocol, _, host, ...path] = url.split("/");
-  const cleanProtocol = protocol.split(":")[0];// при использовании  значения  0 у меня пропал ноль 
-  const cleanPath = path.join("/");
-  console.log(`Протокол сайта: ${cleanProtocol}`);
-  console.log(`Домен сайта: ${host}`);
-  console.log(`Путь сайта: ${cleanPath}`);
+  console.log(tasks[i]);
 }
 
-getUrl(url)
+console.log("------------");
 
+for (let i = 0; i < tasks.length; i++) {
+  if (tasks[i] === "Задача 2") {
+    break;
+  }
+  console.log(tasks[i]);// заканчивается сразу после такого как найдет нашу задачу 2 
+}
