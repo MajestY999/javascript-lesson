@@ -1,65 +1,30 @@
-"use strict";
-
-/*есть массив операций, так же есть начальный баланс в виде 100, 
-необходимо сделать функции: 
-итогового баланса,
-Наличия отрицательного баланса(если после очередной операции баланс  < 0, то выдаст false) 
-
-среднего дохода и расхода 
-*/
-
-const operations = [1000, -700, 300, -500, 10000];
-let startingBalance = 100;
-
-function getBalance(initialBalance, arrayOfOperations) {
-  //проверка баланса на суммирование всех трат и получение итогового баланса
-  let balance = initialBalance;
-
-  for (const element of arrayOfOperations) {
-    balance += element;
-  }
-  return balance;
+function add(a, b) {
+  return a + b;
 }
 
-console.log(getBalance(startingBalance, operations));
+function subtract(a, b) {
+  return a - b;
+}
 
-function checkBalance(initialBalance, arrayOfOperations) {
-  //проверка баланса и результата трат на то что баланс не меньше нуля
-  let balance = initialBalance;
-  const isOk = true;
-  for (const element of arrayOfOperations) {
-    balance += element;
-    if (balance < 0) {
-      isOk = false;
-      break;
-    }
-  }
-  return isOk;
+function power(a, b) {
+  return a ** b;
 }
-console.log(checkBalance(startingBalance, operations));
 
-function avarageOperations(arrayOfOperations) {
-  //проверка среднего числа по всем операциям
-  let positiveCount = 0;
-  let positiveSum = 0;
-  let negativeCount = 0;
-  let negativeSum = 0;
-  for (const element of arrayOfOperations) {
-    if (element > 0) {
-      positiveCount++; //увеличиваем на единицу
-      positiveSum += element; //увеличим на число элемента
-    }
-    if (element < 0) {
-      negativeCount++;
-      negativeSum += element;
-    }
-    //Если наш элемент положительный то мы должны, взять и добавить информацию о том что добавлен доп. положительный элемент. чтобы получить положительное число мы проссумируем все число  и потом еще и поделить на их же число
-  }
-  return [positiveSum / positiveCount, negativeSum / negativeCount];
+//функция высшего порядка
+function calculate(a, b, fn) {
+  console.log(fn.name); //fn другая фукнция внутри функции которая была вызвана
+  const result = fn(a, b);
+  return result;
 }
-for (let i = 1; i < 9; i++) {
-  console.log(i);
-  if (i > 5) {
-    break;
-  }
-}
+
+let res = calculate(3, 5, add);
+console.log(res);
+
+res = calculate(3, 5, subtract);
+console.log(res);
+
+res = calculate(3, 5, power)
+console.log(res);
+
+
+
