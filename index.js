@@ -1,26 +1,20 @@
-//Возврат функции(замыкание)
-// function power(pow) {
-//   return function (num) {
-//     return num ** pow;
-//   };
+const score = [5, 10, 0, 15];
+//Чтобы получить одновременно элемент и его индекс, применяется метод .entries():
+// пример с использованием for of
+// for (const [index, el] of score.entries()) {
+//   console.log(`Раунд ${index}:  ${el}`);
 // }
 
-// // console.log(power(3)(2));
 
-// const powerOfTwo = power(2);
-// console.log(powerOfTwo(5));
-// console.log(powerOfTwo(12));
+// const iterator = (el, index)=> {
+//   console.log(`Раунд ${index}:  ${el}`);
+// }
 
-// const powerOfThree = power(3);
-// console.log(powerOfThree(5));
-
-// console.log(power(5)(4));
-
-const power = (pow, num) => pow ** num;
-
-console.log(power(2, 3));
-
-const power2 = (pow) => (num) => pow ** num;
-console.log(power2(2)(4));
-
-
+// console.log(iterator(10, 4));
+score.forEach((el, index) => {
+   
+  console.log(`Раунд ${index + 1}:  ${el}`);
+  
+}); //(el = () => {})
+//тут не нужно использовать entries и т.д только индекс 
+//(5, 0)
