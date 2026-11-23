@@ -1,24 +1,10 @@
-const operations = [100, -20, 7, -20, 50];
+const prices = [
+  [100, 200],
+  [120, 100],
+  [200, 350],
+];
+const result = prices
+  .map((product) => product[1] - product[0])//не цена а товар и его ценность ну короче просто говоря  во всех массивах(большинстве) второй продукт дроже первого и тогда мы делаем вычитание и тогда получаем итоговую стоимость товара на данный момент
+  .filter((price) => price > 0);//отрабатывает элементы массива на то чтобы какой либо из массивов в результате не был отрицательным
 
-// for (const operation of operations) {
-//   if (operation > 0) {
-//     positiveOperations.push(operation);
-//   }
-// }
-
-// console.log(positiveOperations);
-// operations.filter((elem) => {});
-
-const positiveOperations = operations.filter((operation) => {
-  return operation > 0;
-});
-
-console.log(positiveOperations);
-
-const positiveRUBOperations = operations
-  .filter((operation) => {
-    return operation > 0;
-  })
-  .map((operations) => operations * 60);
-
-console.log(positiveRUBOperations);
+console.log(result);
