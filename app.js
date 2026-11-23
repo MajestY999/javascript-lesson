@@ -161,3 +161,17 @@ function getSmallOrdersAverage(arrayOfOperations) {
 }
 
 console.log(getSmallOrdersAverage(orders));
+
+
+
+//foreach
+
+
+const money = [100, 250, 340, 400];
+let sum = 0;
+
+money.forEach((num) => {
+  sum += num;
+});
+
+console.log(`Результат пополнений баланса: ${sum}`);

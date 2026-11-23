@@ -1,20 +1,16 @@
-const score = [5, 10, 0, 15];
-//Чтобы получить одновременно элемент и его индекс, применяется метод .entries():
-// пример с использованием for of
-// for (const [index, el] of score.entries()) {
-//   console.log(`Раунд ${index}:  ${el}`);
-// }
+const transactionsInUSD = [10, -7, 50, -10, 100];
 
+const transactionInRUB = []; //процедурный метод
+for (const transaction of transactionsInUSD) {
+  transactionInRUB.push(transaction * 60);
+}
 
-// const iterator = (el, index)=> {
-//   console.log(`Раунд ${index}:  ${el}`);
-// }
+console.log(transactionsInUSD);
+console.log(transactionInRUB);
 
-// console.log(iterator(10, 4));
-score.forEach((el, index) => {
-   
-  console.log(`Раунд ${index + 1}:  ${el}`);
-  
-}); //(el = () => {})
-//тут не нужно использовать entries и т.д только индекс 
-//(5, 0)
+const transactionsInRUB2 = transactionsInUSD.map((transaction, i) => {
+  console.log(i);
+  return transaction * 60;
+});
+//   return console.log(`${index + 1}: ${transaction * 60}`);//такое лучше не использовать так как мы вносим изменения внутри массива а не вызываем каждый элемент или например их сумму
+console.log(transactionsInRUB2);
