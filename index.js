@@ -1,16 +1,24 @@
-const transactionsInUSD = [10, -7, 50, -10, 100];
+const operations = [100, -20, 7, -20, 50];
 
-const transactionInRUB = []; //процедурный метод
-for (const transaction of transactionsInUSD) {
-  transactionInRUB.push(transaction * 60);
-}
+// for (const operation of operations) {
+//   if (operation > 0) {
+//     positiveOperations.push(operation);
+//   }
+// }
 
-console.log(transactionsInUSD);
-console.log(transactionInRUB);
+// console.log(positiveOperations);
+// operations.filter((elem) => {});
 
-const transactionsInRUB2 = transactionsInUSD.map((transaction, i) => {
-  console.log(i);
-  return transaction * 60;
+const positiveOperations = operations.filter((operation) => {
+  return operation > 0;
 });
-//   return console.log(`${index + 1}: ${transaction * 60}`);//такое лучше не использовать так как мы вносим изменения внутри массива а не вызываем каждый элемент или например их сумму
-console.log(transactionsInRUB2);
+
+console.log(positiveOperations);
+
+const positiveRUBOperations = operations
+  .filter((operation) => {
+    return operation > 0;
+  })
+  .map((operations) => operations * 60);
+
+console.log(positiveRUBOperations);
