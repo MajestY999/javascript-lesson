@@ -175,3 +175,42 @@ money.forEach((num) => {
 });
 
 console.log(`Результат пополнений баланса: ${sum}`);
+
+
+
+// Напиши функцию, которая принимает массив цен и возвращает новый массив, где оставлены только корректные цены
+// (строго больше 0, без нулей и минусов).
+// Напиши вторую функцию (или сделай цепочкой), которая принимает массив
+// уже нормальных цен и прибавляет к каждой налог 20% (например, было 1000 — стало 1200).
+// Посчитай общую сумму всех итоговых цен (через reduce или forEach).
+// Выведи в консоль итоговый массив цен с налогом и их общую сумму.
+
+// Условия:
+// Все названия функций, параметров и переменных придумываешь сам.
+// Только методы массивов (filter, map, reduce / forEach), без циклов for.
+
+// Как напишешь — кидай код сюда, посмотрим по факту.
+
+const rawPrices = [1200, -300, 4500, 0, 800, 15000, -50, 3200];
+
+const taxPercent = 1.2; //сразу привел в норамльно число чтобы не считать (1+ 20 / 100)
+let totalPrice = 0;
+const filterPrices = rawPrices.filter((el) => el > 0);
+const arrayNewPrices = filterPrices.map((el) => el * taxPercent);
+console.log(arrayNewPrices);
+arrayNewPrices.forEach(el =>{
+return totalPrice += el
+})
+
+
+console.log(totalPrice);
+
+
+const cartPrices = [450, 1200, 300, 5000, 850, 2400];
+
+let totalPrice1 = 0;
+const filterPrices1 = cartPrices.filter((el) => el >= 1000);
+const newArrayPrices = filterPrices1.map((el) => el * 0.85);
+newArrayPrices.forEach(el => totalPrice1 += el)
+console.log(newArrayPrices);
+console.log(totalPrice);

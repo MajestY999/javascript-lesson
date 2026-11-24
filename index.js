@@ -1,10 +1,28 @@
-const prices = [
-  [100, 200],
-  [120, 100],
-  [200, 350],
-];
-const result = prices
-  .map((product) => product[1] - product[0])//не цена а товар и его ценность ну короче просто говоря  во всех массивах(большинстве) второй продукт дроже первого и тогда мы делаем вычитание и тогда получаем итоговую стоимость товара на данный момент
-  .filter((price) => price > 0);//отрабатывает элементы массива на то чтобы какой либо из массивов в результате не был отрицательным
+//reduce
+const operations = [100, -20, 7, -30, 50];
 
-console.log(result);
+let balance = 0;
+
+for (const operation of operations) {
+  balance += operation;
+}
+
+const finalBalance = operations.reduce((acc, value, i) => {
+  console.log(` индекс: ${i} acc: ${acc} operation: ${value}`);
+  return (acc += value);
+}, 0); //ноль как начальная величина нашего значения. acc  = 0; value =  100;
+
+/*предыдущая величина,  туда куда будут передаваться наше значение по нашему например балансу  */
+
+console.log(finalBalance);
+
+const minElem = operations.reduce((acc, operation, i) => {
+  console.log(`индекс ${i} acc ${acc} и operation ${operation}`);
+  if (operation > acc) {
+    return acc; //если она больше то берем предыдущу
+  } else {
+    return operation; // иначе она минимальна
+  }
+}, 0);
+
+console.log(minElem);
