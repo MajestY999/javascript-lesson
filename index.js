@@ -1,21 +1,10 @@
-//sort
-const users = ["Вася", "Маша", "Катя", "Аня"];
-console.log(users);
-users.sort();
-console.log(users);
+const userName = "Вася Пупкин"; //при использовании эмодзи будут некоторые проблемы при выведении в консоль
+console.log(userName.charAt(2));
+console.log(userName);
 
-const operations = [100, -300, -100, 50, 480];
-//< 0 - a,b : сохраняем порядок
-// > 0 - b, a: меняем порядок
-operations.sort((a, b) => a - b);
-console.log(operations); //отсортировались как строки  считая первое число как строку и понимая что наример 100 потом 400 потом 50 , поэтому простой sort не поможет надо писать логику
+console.log(userName.length);
+console.log(userName.indexOf("а")); //11 индекс
+console.log(userName.lastIndexOf("а"));
+console.log(userName.includes("уп")); //true
 
-operations.sort((a, b) => {
-  if (a < b) {
-    return 1;
-  } else if (a > b) {
-    return -1;
-  }
-});
-
-console.log(operations);
+console.log(userName.slice(0, 8));
